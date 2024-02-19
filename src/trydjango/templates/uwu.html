@@ -1,8 +1,32 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 <html>
 <head>UWU</head>
 <body>
+    {% block content %}
     <h1>uwu</h1>
-    <p>Kawaii</p>
+    <p> 
+        Kawaii <br>
+        <img src ="https://storage.ko-fi.com/cdn/useruploads/display/089ade65-d227-47fc-8349-bf33336b361a_sbahrialertgif.gif" alt="poggers" height="310" width="400">
+    </p>
+    <p>
+        {{ my_name }}, {{ my_number }} <br>
+        {{ my_list }}
+        <ul>
+            {% for item in my_list %}
+            <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+        <ol>
+            {% for tuple_item in my_tuple %}
+            {% if tuple_item == "no" %}
+                <li>yeah</li>
+            {% else %}
+                <li>{{ tuple_item }}</li>
+            {% endif %}
+            {% endfor %}
+        </ol>
+    </p>
+
+    {% endblock %}
 </body>
 </html>
