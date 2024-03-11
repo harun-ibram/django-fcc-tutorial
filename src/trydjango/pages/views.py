@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from pathlib import Path
+import datetime
 # Create your views here.
 
 def home_view(request, *arg, **kwargs):
@@ -15,7 +16,13 @@ def uwu_view(request, *arg, **kwargs):
 		"my_number": 69,
 		"my_list": ["this", "is", "super", "cool"],
 		"my_tuple": ("oh", "no"),
-		"my_akali": akali
+		"my_akali": akali,
+		"my_html": "<h1>waht the fcuk is going on</h1>",
+		"my_date": datetime.date(
+			year = 2025,
+			month = 1,
+			day = 1
+		),
 	}
 	return render(request, "uwu.html", my_context)
 

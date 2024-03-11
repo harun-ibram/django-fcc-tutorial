@@ -1,11 +1,15 @@
 {% extends 'base.html' %}
+{% load static %}
 <html>
 <head>UWU</head>
 <body>
     {% block content %}
     <h1>uwu</h1>
+    {{ my_html | safe | title }} <br>
+    {{ my_date | timeuntil }}
     <p> 
         Kawaii <br>
+        <img src="{% static 'akali.jpg' %}" alt="my image" />
         <img src ="https://storage.ko-fi.com/cdn/useruploads/display/089ade65-d227-47fc-8349-bf33336b361a_sbahrialertgif.gif" alt="poggers" height="310" width="400">
     </p>
     <p>
