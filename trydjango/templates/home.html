@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+<head>Home</head>
+<body>
+    <img src="{% static 'akali.jpg'%}" alt="my image" />
+    {% block content %}
+    <h1>YO!</h1>
+    <p>Welcome!</p>
+    {% endblock %}
+</body>

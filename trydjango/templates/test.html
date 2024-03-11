@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{{ request.user.is_authenticated }}
+{% load static %}
+<body>
+        <img src="{% static 'akali.jpg'%}" alt="my image" />
+        {% block content %}
+        <div id="title">
+            <h1><strong>This is a title</strong></h1>
+        </div>
+        {% endblock %}    
+    </body>
